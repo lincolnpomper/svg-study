@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animation by easing with SVG</title>
+
+    <link rel="stylesheet" href="css/animation-with-easing.css" />
+
+    <script type='application/javascript' src="js/jquery.js"></script>
+    <script type='application/javascript' src="js/snap.svg.js"></script>
+    <script type='application/javascript' src="js/animation-with-easing.js"></script>
+
+</head>
+
+<body onload="init(); initBotoes();">
+
+    <h3>Animating a SVG drawing making use of easing functions and snap.svg</h3>
+
+    <svg id="svgMode1" viewBox="0 0 308 208">
+    </svg>
+
+    <svg id="svgMode2" viewBox="0 0 100 100" style="display: none">
+    </svg>
+
+    <div>
+
+        <label for="bt1">mode 1</label>
+        <button id="bt1">animate!</button>
+        </br>
+        <label for="bt2">decrease speed mode 1</label>
+        <button id="bt2">decrease</button>
+
+        </br>
+        </br>
+        <label for="sel1">easing for mode 1</label>
+        </br>
+        <label for="sel1">step 1</label>
+        <select id="sel1" onchange="easingTypeChange(event, 1)">
+            <option value="0">linear</option>
+            <option value="1">easeout</option>
+            <option value="2">easein</option>
+            <option value="3">easeinout</option>
+            <option value="4">backin</option>
+            <option value="5" selected="selected">backout</option>
+            <option value="6">elastic</option>
+            <option value="7">bounce</option>
+            <option value="8">inOutElastic</option>
+        </select>
+
+        </br>
+        <label for="sel2">step 2</label>
+        <select id="sel2" onchange="easingTypeChange(event, 2)">
+            <option value="0">linear</option>
+            <option value="1">easeout</option>
+            <option value="2">easein</option>
+            <option value="3">easeinout</option>
+            <option value="4">backin</option>
+            <option value="5" selected="selected">backout</option>
+            <option value="6">elastic</option>
+            <option value="7">bounce</option>
+            <option value="8">inOutElastic</option>
+        </select>
+        </br>
+        <label for="sel3">step 3</label>
+        <select id="sel3" onchange="easingTypeChange(event, 3)">
+            <option value="0">linear</option>
+            <option value="1">easeout</option>
+            <option value="2">easein</option>
+            <option value="3">easeinout</option>
+            <option value="4">backin</option>
+            <option value="5">backout</option>
+            <option value="6">elastic</option>
+            <option value="7" selected="selected">bounce</option>
+            <option value="8">inOutElastic</option>
+        </select>
+        </br>
+        </br>
+
+        <label for="bt3">mode 2</label>
+        <button id="bt3">animate!</button>
+        </br>
+        <label for="inputProgressoFlow">progress</label>
+        <input id="inputProgressoFlow" type="range" min="1" max="100" value="25" onchange="inputProgressoFlowChange(event)">
+        <label id="labelProgressValue" style=" width: 1%;">25</label>
+        </br>
+        <label for="sel1">easing for mode 2</label>
+        <select id="sel1" onchange="easingTypeChange(event, 4)">
+            <option value="0">linear</option>
+            <option value="1">easeout</option>
+            <option value="2">easein</option>
+            <option value="3">easeinout</option>
+            <option value="4">backin</option>
+            <option value="5">backout</option>
+            <option value="6">elastic</option>
+            <option value="7">bounce</option>
+            <option value="8" selected="selected">inOutElastic</option>
+        </select>
+        </br>
+        </br>
+
+        <label for="sel3">Animation progress</label>
+        <span id="progressAnimation"></span>
+    </div>
+</body>
+
+</html>

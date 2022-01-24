@@ -1,0 +1,30 @@
+body {
+    background: #000;
+    padding: 4%;
+}
+
+h2 {
+    color: gold;
+    text-align: center;
+}
+
+h3 {
+    margin-right: 20px;
+    font-size: 0.7em;
+    color: #f6f454;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+svg {
+    stroke-width: 1px;
+    stroke: #e99932;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: #000;
+    margin: 5%;
+    padding: 4.4%;
+}

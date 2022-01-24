@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="utf-8">
+
+    <title>Grafico Lagrange</title>
+
+    <link rel="stylesheet" href="graph-lagrange.css" />
+
+    <script type='application/javascript' src="../js/Lagrange.js"></script>
+    <script type='application/javascript' src="graph-lagrange.js"></script>
+
+</head>
+
+<body onload="init()">
+
+    <div class="flex-container">
+        <div style="flex-grow: 4">
+            <canvas style='display:inline;' id='canvas' width='500' height='384'></canvas>
+        </div>
+
+        <div style="flex-grow: 1">
+            <h3>Coordenadas para o polinômio</h3>
+            <div id="divX">
+                <label for="x1">x1</label>
+                <input id="x1" class="x" value="1" type="number" />
+                <label for="x2">x2</label>
+                <input id="x2" class="x" value="9" type="number" />
+                <label for="x3">x3</label>
+                <input id="x3" class="x" value="38" type="number" />
+                <label for="x4">x4</label>
+                <input id="x4" class="x" value="300" type="number" />
+            </div>
+            <div id="divY">
+                <label for="y1">y1</label>
+                <input id="y1" class="y" value="1" type="number" />
+                <label for="y2">y2</label>
+                <input id="y2" class="y" value="2" type="number" />
+                <label for="y3">y3</label>
+                <input id="y3" class="y" value="5" type="number" />
+                <label for="y4">y4</label>
+                <input id="y4" class="y" value="10" type="number" />
+            </div>
+
+            <div class="buttonBar">
+                <button onclick="addFields()">adicionar campos</button>
+                <button onclick="removeLastFields()">remover últimos campos</button>
+            </div>
+            <div class="clear" />
+
+            <h3>Propriedades do Gráfico</h3>
+
+            <div class="clear" />
+            <div>
+                <label for="inputZoomX">Zoom para x</label>
+                <input id="inputZoomX" value="2" type="number" />
+            </div>
+
+            <div class="clear" />
+            <div>
+                <label for="inputZoomY">Zoom para y</label>
+                <input id="inputZoomY" value="28" type="number" />
+            </div>
+
+            <div class="clear" />
+            <div>
+                <label for="inputMaximumX">X máximo</label>
+                <input id="inputMaximumX" value="200" type="number" />
+            </div>
+
+            <div class="clear" />
+            <div>
+                <label for="inputMaximumY">Y máximo</label>
+                <input id="inputMaximumY" value="10" type="number" />
+            </div>
+
+            <div class="clear" />
+            <div>
+                <div class="clear" />
+                <label for="inputWidth">Largura</label>
+                <input id="inputWidth" value="500" type="number" />
+            </div>
+            <div class="clear" />
+            <div>
+                <label for="inputHeight">Altura</label>
+                <input id="inputHeight" value="384" type="number" />
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

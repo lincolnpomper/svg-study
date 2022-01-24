@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loading SVG files using jquery</title>
+       
+    <link rel="stylesheet" href="css/svg-collection.css" />
+
+    <script type='application/javascript' src="js/jquery.js"></script>
+
+    <script>
+
+        function init() {
+
+            var array = [
+                'early-education-learning-abc-cubes-play-svgrepo-com.svg',
+                'education-book-learn-school-library-svgrepo-com.svg',
+                'education-book-library-search-svgrepo-com.svg',
+                'education-calculator-maths-svgrepo-com.svg',
+                'education-pen-writing-svgrepo-com.svg',
+                'education-school-draw-pencil-svgrepo-com.svg',
+                'elearning-learning-online-book-computer-svgrepo-com.svg',
+                'elearning-learning-online-book-smartphone-svgrepo-com.svg',
+                'head-cog-brainstorm-thinking-ideas-svgrepo-com.svg',
+                'learning-head-book-education-svgrepo-com.svg',
+                'school-bus-vehicle-svgrepo-com.svg'];
+
+            for (var i = 0; i < array.length; i++) {
+
+                var text = $.ajax({
+                    url: "svg/icons/" + array[i],
+                    async: false,
+                    dataType: "text"
+                }).responseText;
+
+                document.getElementById('div1').innerHTML += '<div><h3>' + array[i] + '</h3>' + text + '</div>';
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+
+    <h2>Loading SVG files using jquery</h2>
+
+    <div id="div1" class="flex-container">
+    </div>
+
+</body>
+
+</html>

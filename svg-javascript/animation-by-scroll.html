@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="utf-8">
+
+    <title>Animation by mouse move with SVG</title>
+
+    <script type='application/javascript' src="js/Lagrange.js"></script>
+    <script type='application/javascript' src="lagrange/graph-lagrange.js"></script>
+    <script type='application/javascript' src="js/FileLoader.js"></script>
+    <script type='application/javascript' src="js/snap.svg.js"></script>
+    <script type='application/javascript' src="js/AnimationsManager.js"></script>
+
+    <link rel="stylesheet" href="css/animation-by-scroll.css" />
+    <script type='application/javascript' src="js/animation-by-scroll.js"></script>
+
+</head>
+
+<body onload="init(); initAnimation()">
+    <h2>Animation by mouse move with SVG and snap.svg</h2>
+    <p>Move the mouse up and down for the animal parts to animate.</p>
+
+    <div class="grid-container">
+
+        <div class="mainDiv">
+            <div id="div-svg"></div>
+        </div>
+
+        <div class="rightDiv">
+
+            <h3>Animation properties</h3>
+            <div>
+                <label for="inputForSVGRotation">Rotation</label>
+                <input id="inputForSVGRotation" value="2" type="number" />
+            </div>
+
+            <div>
+                <label for="inputForSVGRotation1">Rotation</label>
+                <input id="inputForSVGRotation1" value="2" type="number" />
+            </div>
+
+            <div>
+                <label for="labelSpeed">Speed</label>
+                <label id="labelSpeed">0</label>
+            </div>
+           
+            <h3>Polynomial coordinates</h3>
+            <div id="divX">
+                <label for="x1">x1</label>
+                <input id="x1" class="x" value="1" type="number" />
+                <label for="x2">x2</label>
+                <input id="x2" class="x" value="53" type="number" />
+                <label for="x3">x3</label>
+                <input id="x3" class="x" value="104" type="number" />
+                <label for="x4">x4</label>
+                <input id="x4" class="x" value="500" type="number" />
+            </div>
+            <div id="divY">
+                <label for="y1">y1</label>
+                <input id="y1" class="y" value="1" type="number" />
+                <label for="y2">y2</label>
+                <input id="y2" class="y" value="4" type="number" />
+                <label for="y3">y3</label>
+                <input id="y3" class="y" value="6" type="number" />
+                <label for="y4">y4</label>
+                <input id="y4" class="y" value="8" type="number" />
+            </div>
+
+            <div class="buttonBar">
+                <button onclick="addFields()">add fields</button>
+                <button onclick="removeLastFields()">remove last fields</button>
+                <br>
+                <button onclick="updateAnimationMetrics()">update animation data</button>
+            </div>
+
+            <h3>Graph properties</h3>
+
+            <div>
+                <label for="inputZoomX">Zoom for x</label>
+                <input id="inputZoomX" value="2" type="number" />
+            </div>
+
+            <div>
+                <label for="inputZoomY">Zoom for y</label>
+                <input id="inputZoomY" value="13" type="number" />
+            </div>
+
+            <div>
+                <label for="inputMaximumX">Maximum X</label>
+                <input id="inputMaximumX" value="300" type="number" />
+            </div>
+
+            <div>
+                <label for="inputMaximumY">Maximum Y</label>
+                <input id="inputMaximumY" value="10" type="number" />
+            </div>
+
+            <div>
+                <label for="inputWidth">Width</label>
+                <input id="inputWidth" value="900" type="number" />
+            </div>
+            <div>
+                <label for="inputHeight">Height</label>
+                <input id="inputHeight" value="222" type="number" />
+            </div>
+        </div>
+
+        <div class="footerDiv">
+            <canvas style='display:inline;' id='canvas' width='900' height='222'></canvas>
+        </div>
+    </div>
+
+</body>
+
+</html>
